@@ -4,7 +4,8 @@
 *.log
 *.eml
 Enrolle.userlibraries
-
+.classpath
+.project
 
 Будет удалено .idea/
 Будет удалено EnrolleeManager/src/test/

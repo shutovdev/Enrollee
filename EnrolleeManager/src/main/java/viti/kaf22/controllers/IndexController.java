@@ -86,4 +86,7 @@ public class IndexController {
         return "redirect:/";
     }
 
+    public void hello(){
+        System.out.println("hello word");
+    }
 }

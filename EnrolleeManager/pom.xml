@@ -1,0 +1,360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>Enrolle</artifactId>
+		<groupId>VITI.KAF22</groupId>
+		<version>1.0</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>EnrolleeManager</artifactId>
+	<packaging>war</packaging>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+		<hibernate.version>5.2.10.Final</hibernate.version>
+	</properties>
+
+
+	<dependencies>
+		<!--Hibernate -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- for JPA, use hibernate-entitymanager instead of hibernate-core -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<!-- optional -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-osgi</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-envers</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-c3p0</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-proxool</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-infinispan</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>5.4.1.Final</version>
+
+			<exclusions>
+				<exclusion>
+					<groupId>javax.validation</groupId>
+					<artifactId>validation-api</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+
+
+		<!--***************************************************************************************************************** -->
+		<!--MySQL DRIVER -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>[6.0.5, 6.11]</version>
+		</dependency>
+
+		<!--***************************************************************************************************************** -->
+		<!--Spring Framework -->
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>4.3.7.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>4.3.8.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>4.3.7.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>4.3.7.RELEASE</version>
+		</dependency>
+
+		<!--<dependency> -->
+		<!--<groupId>org.springframework.boot</groupId> -->
+		<!--<artifactId>spring-boot-starter</artifactId> -->
+		<!--<exclusions> -->
+		<!--<exclusion> -->
+		<!--<groupId>org.springframework.boot</groupId> -->
+		<!--<artifactId>spring-boot-starter-logging</artifactId> -->
+		<!--</exclusion> -->
+		<!--</exclusions> -->
+		<!--</dependency> -->
+		<!--<dependency> -->
+		<!--<groupId>org.springframework.boot</groupId> -->
+		<!--<artifactId>spring-boot-starter-log4j2</artifactId> -->
+		<!--</dependency> -->
+
+		<!--<dependency> -->
+		<!--<groupId>org.springframework.webflow</groupId> -->
+		<!--<artifactId>spring-webflow</artifactId> -->
+		<!--<version>2.3.3.RELEASE</version> -->
+		<!--</dependency> -->
+
+		<!--<dependency> -->
+		<!--<groupId>org.springframework</groupId> -->
+		<!--<artifactId>spring-jdbc</artifactId> -->
+		<!--<version>4.3.7.RELEASE</version> -->
+		<!--</dependency> -->
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+			<version>4.3.7.RELEASE</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>4.3.7.RELEASE</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.javassist</groupId>
+			<artifactId>javassist</artifactId>
+			<version>3.21.0-GA</version>
+		</dependency>
+
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjlib</artifactId>
+			<version>1.6.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.8.10</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.8.0</version>
+		</dependency>
+
+		<!--Logger -->
+
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+			<!--<scope>runtime</scope> -->
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>4.3.7.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-dbcp2</artifactId>
+			<version>[2.0,2.0.19]</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>[4.11, 5.1]</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.stefanbirkner</groupId>
+			<artifactId>system-rules</artifactId>
+			<version>1.16.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>javax.transaction</groupId>
+			<artifactId>jta</artifactId>
+			<version>1.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>3.12</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.12</version>
+		</dependency>
+
+	</dependencies>
+
+	<!--************************************************************************************************************* -->
+	<!--*************************************WEB BUILDINGS*********************************************************** -->
+	<!--************************************************************************************************************* -->
+	<!--<build> -->
+	<!--<plugins> -->
+	<!--<plugin> -->
+	<!--&lt;!&ndash;configuration wildfly plugin for deploy project to server&ndash;&gt; -->
+	<!--<groupId>org.wildfly.plugins</groupId> -->
+	<!--<artifactId>wildfly-maven-plugin</artifactId> -->
+	<!--<version>1.2.0.Alpha4</version> -->
+	<!--&lt;!&ndash;<configuration>&ndash;&gt; -->
+	<!--&lt;!&ndash;<server-args>&ndash;&gt; -->
+	<!--&lt;!&ndash;<server-arg>Djboss.bind.address=0.0.0.0</server-arg>&ndash;&gt; -->
+	<!--&lt;!&ndash;<server-arg>-b=192.168.0.171</server-arg>&ndash;&gt; -->
+	<!--&lt;!&ndash;&lt;!&ndash;<server-arg>-Djboss.home.dir=/opt/wildfly</server-arg>&ndash;&gt;&ndash;&gt; -->
+	<!--&lt;!&ndash;&lt;!&ndash;<server-arg>-Djboss.server.base.dir=/opt/wildfly/standalone</server-arg>&ndash;&gt;&ndash;&gt; -->
+	<!--&lt;!&ndash;</server-args>&ndash;&gt; -->
+
+	<!--&lt;!&ndash;&lt;!&ndash;<hostname>Test SERVER</hostname>&ndash;&gt;&ndash;&gt; -->
+	<!--&lt;!&ndash;<id>192.168.0.171</id>&ndash;&gt; -->
+	<!--&lt;!&ndash;<hostname>192.168.0.171</hostname>&ndash;&gt; -->
+	<!--&lt;!&ndash;<port>9999</port>&ndash;&gt; -->
+	<!--&lt;!&ndash;<username>shutov</username>&ndash;&gt; -->
+	<!--&lt;!&ndash;<password>mobidick</password>&ndash;&gt; -->
+	<!--&lt;!&ndash;<jboss-home>/media/korch/Space/Develop/Additional/wildfly11/</jboss-home>&ndash;&gt; -->
+	<!--&lt;!&ndash;</configuration>&ndash;&gt; -->
+
+	<!--&lt;!&ndash;Configuration localhost SERVER&ndash;&gt; -->
+	<!--<configuration> -->
+	<!--<id>localhost</id> -->
+	<!--<hostname>localhost</hostname> -->
+	<!--<username>shutov</username> -->
+	<!--<password>admin</password> -->
+	<!--<jboss-home>/media/korch/Space/Develop/Additional/wildfly11/</jboss-home> -->
+	<!--</configuration> -->
+
+	<!--<executions> -->
+	<!--<execution> -->
+	<!--<id>deploy</id> -->
+	<!--<phase>install</phase> -->
+	<!--<goals> -->
+	<!--<goal>deploy</goal> -->
+	<!--</goals> -->
+	<!--</execution> -->
+	<!--</executions> -->
+	<!--</plugin> -->
+
+	<!--<plugin> -->
+	<!--<artifactId>maven-war-plugin</artifactId> -->
+	<!--<version>3.0.0</version> -->
+	<!--</plugin> -->
+	<!--</plugins> -->
+	<!--</build> -->
+
+	<!--************************************************************************************************************* -->
+	<!--*******************************************Console building************************************************** -->
+	<!--************************************************************************************************************* -->
+
+	<build>
+		<pluginManagement>
+			<plugins>
+
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<version>2.20</version>
+					<dependencies>
+						<dependency>
+							<groupId>org.apache.maven.surefire</groupId>
+							<artifactId>surefire-junit47</artifactId>
+							<version>2.20</version>
+						</dependency>
+					</dependencies>
+					<configuration>
+						<argLine>-Dfile.encoding=UTF8</argLine>
+						<includes>
+							<include>**/*IT.java</include>
+						</includes>
+						<runOrder>alphabetical</runOrder>
+					</configuration>
+					<executions>
+						<execution>
+							<id>integration-test</id>
+							<phase>integration-test</phase>
+						</execution>
+					</executions>
+				</plugin>
+				<plugin>
+					<groupId>org.codehaus.mojo</groupId>
+					<artifactId>exec-maven-plugin</artifactId>
+					<version>1.2.1</version>
+					<executions>
+						<execution>
+							<goals>
+								<goal>exec</goal>
+							</goals>
+						</execution>
+					</executions>
+					<configuration>
+						<mainClass>viti.kaf22.main.App</mainClass>
+					</configuration>
+				</plugin>
+				<plugin>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.5.1</version>
+					<configuration>
+						<source>1.8</source>
+						<target>1.8</target>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>

@@ -1,0 +1,13 @@
+.idea/*
+/**/target/*
+*.iml
+*.log
+*.eml
+Enrolle.userlibraries
+
+
+Будет удалено .idea/
+Будет удалено EnrolleeManager/src/test/
+Будет удалено EnrolleeManager/target/
+Будет удалено UserManager/src/
+Будет удалено src/
